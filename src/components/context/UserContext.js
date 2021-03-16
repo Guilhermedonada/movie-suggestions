@@ -4,7 +4,7 @@ export const UserContext = createContext()
 
 export const UserProvider = (props) => {
 
-  const[answer, setAnswer] = useState(["NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO"])
+  const[answer, setAnswer] = useState([])
 
   return(
     <UserContext.Provider value={[answer, setAnswer]}>

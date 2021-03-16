@@ -2,17 +2,15 @@ import React, {useContext, useEffect, useState } from 'react'
 import {UserContext, UserProvider} from './context/UserContext'
 import {FilmsContext, FilmsProvider} from './context/FilmsContext'
 
+import {Link} from 'react-router-dom'
+
 const movies_list = []
 const List = () => {
 
   const [answer, setAnswer] = useContext(UserContext)
   const [films, setFilms] = useContext(FilmsContext)
   const [movies, setMovies] = useState([])
-  
-  // console.log('List')
-  // console.log(answer)
-  // console.log('Films')
-  // console.log(films)
+
   useEffect(() => {
     Funcao()
   }, [])
@@ -88,13 +86,28 @@ const List = () => {
   return(
     <div className="css-card-area">
       <div className="css-movies-area">
-        {movies.map((movie,index) => (
-          <div key={index}>
-            <p>Filme: {movie.movie.name_pt}</p>
-            <p>Ano: {movie.movie.year}</p>
-            <p>Tempo: {movie.movie.time}</p>
-          </div>
-        ))}
+        { answer.length > 0 ?     
+          movies.slice(0,10).map((movie,index) => (
+            <div key={index}>
+              <p>Filme: {movie.movie.name_pt}</p>
+              <p>Ano: {movie.movie.year}</p>
+              <p>Tempo: {movie.movie.time}</p>
+            </div>
+          )) : 
+  
+
+       
+            <div className="css-begin-area">
+              <Link style={{ textDecoration: 'inherit', padding:20}}  to="/quests">
+                <a role="button" className="css-begin-button">NOVAS SUGESTÕES</a>
+              </Link>
+            </div>
+
+
+
+
+        }
+      
       </div>
     </div>
   )

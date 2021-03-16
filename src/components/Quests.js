@@ -104,7 +104,7 @@ const Quests = () => {
     if((e.target.dataset.index) == quests.length - 1){
       console.log('acabou as perguntass')
       setAnswer(array_answer)
-      history.push("/list")
+      history.push("/movies")
     } else {      
       setQuest(quests[parseInt(e.target.dataset.index) + 1])
       //monta array de resposta

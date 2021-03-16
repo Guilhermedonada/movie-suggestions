@@ -34,7 +34,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  /* margin-top: auto; */
   width: 100%;
 }
 
@@ -152,6 +152,78 @@
 }
 
 
+.css-left-name {
+  position: absolute;
+  font: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 100%;
+  width: 100px;
+  background: black;
+  box-shadow:  1px 1px 5px #b1b1b1;
+  /* border-right: 20px dashed white;
+    border-left: 20px dashed white; */
+}
+
+.css-right-name {
+  position: absolute;
+  font: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: 100%;
+  width: 100px;
+  background: black;
+  right: 0;
+  box-shadow:  1px 1px 5px #b1b1b1;
+  /* border-right: 20px dashed white;
+    border-left: 20px dashed white; */
+}
 
 
 
+
+/* 
+.css-icon {
+  width: 200px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+}
+
+.css-icon div:first-child {
+  border-color: black;
+  border:solid;
+  border-width: 10px 20px 10px 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 20px 20px;
+  background-color: blue;
+}
+
+.css-icon div:last-child {
+  border-color: black;
+  border:solid;
+  border-width: 10px 10px 10px 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 10px 20px 20px;
+  background-color: red;
+} */
+
+
+.css-begin-area {
+  display: flex;
+  justify-content: center;
+}
+
+.css-begin-button {
+  border: 1px solid white;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.css-begin-button:hover {
+  background: #232323;
+  box-shadow: 0px 0px 2px #d4d4d4;
+}
