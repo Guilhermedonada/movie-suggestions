@@ -89,9 +89,11 @@ const List = () => {
         { answer.length > 0 ?     
           movies.slice(0,10).map((movie,index) => (
             <div key={index}>
-              <p>Filme: {movie.movie.name_pt}</p>
-              <p>Ano: {movie.movie.year}</p>
-              <p>Tempo: {movie.movie.time}</p>
+              <p className="f-20">Filme: {movie.movie.name_pt}</p>
+              <p className="f-14 css-grey">Ano: {movie.movie.year}</p>
+              <p className="f-14 css-grey">Tempo: {movie.movie.time}</p>
+          
+              <p className={ movie.qtd > 7 ? 'css-purple' : 'css-blue'}>Converge: {movie.qtd * 10}%</p>
             </div>
           )) : 
   

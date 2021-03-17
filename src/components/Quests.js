@@ -116,8 +116,10 @@ const Quests = () => {
   }
 
   return(
-    <div className="css-area-quest">
-      <p>{quest.quest}</p> 
+    <div className="css-area-quest flex-column d-flex">
+      <div className="d-flex flex-row justify-content-between">
+        <p>{quest.quest}</p> 
+      </div>
       <div className="d-flex flex-row justify-content-between css-area-checkbox">
         <div className="d-flex">
           <input id="c1" type="checkbox" onClick={changeQuest} data-index={quest.id} data-answer={'YES'}/>
@@ -134,6 +136,9 @@ const Quests = () => {
           <label for="c0"></label>
           <p>{quest.answer_2}</p>
         </div>
+      </div>
+      <div className="d-flex flex-row justify-content-end">
+        <p className="f-12 mb-0">{quest.id + 1}/10</p>
       </div>
     </div>
   )
