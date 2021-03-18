@@ -117,10 +117,10 @@ const Quests = () => {
 
   return(
     <div className="css-area-quest flex-column d-flex">
-      <div className="d-flex flex-row justify-content-between">
+      <div className="css-quest">
         <p>{quest.quest}</p> 
       </div>
-      <div className="d-flex flex-row justify-content-between css-area-checkbox">
+      <div className="justify-content-between css-area-checkbox">
         <div className="d-flex">
           <input id="c1" type="checkbox" onClick={changeQuest} data-index={quest.id} data-answer={'YES'}/>
           <label for="c1"></label>
